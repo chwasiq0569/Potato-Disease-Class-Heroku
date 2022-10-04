@@ -22,9 +22,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL = tf.keras.models.load_model("../saved_models/1")
-prod_model = tf.keras.models.load_model("../saved_models/1")
-beta_model = tf.keras.models.load_model("../saved_models/2")
+MODEL = tf.keras.models.load_model("./saved_models/1")
+prod_model = tf.keras.models.load_model("./saved_models/1")
+beta_model = tf.keras.models.load_model("./saved_models/2")
 
 CLASS_NAMES = ['Early_blight', 'Late_blight', 'healthy']
 
@@ -52,4 +52,4 @@ async def predict(
     }
 
 if __name__ == "__main__":
-    uvicorn.run(app, host='localhost', port=8000)
+    uvicorn.run(app, host='localhost', port=8001)
