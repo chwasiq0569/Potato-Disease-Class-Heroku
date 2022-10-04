@@ -23,8 +23,6 @@ app.add_middleware(
 )
 
 MODEL = tf.keras.models.load_model("./saved_models/1")
-prod_model = tf.keras.models.load_model("./saved_models/1")
-beta_model = tf.keras.models.load_model("./saved_models/2")
 
 CLASS_NAMES = ['Early_blight', 'Late_blight', 'healthy']
 
